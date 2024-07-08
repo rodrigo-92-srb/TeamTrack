@@ -1,6 +1,6 @@
 package Workers;
 
-public class Worker {
+public abstract class Worker {
 
     private Long id;
     private String name;
@@ -25,4 +25,6 @@ public class Worker {
     public void setName(String name) {
         this.name = name;
     }
+
+    public abstract double calcPayment();
 }
