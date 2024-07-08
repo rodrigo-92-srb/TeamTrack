@@ -1,10 +1,11 @@
-import Workers.Worker;
-
+import Workers.Operator;
 public class Main {
     public static void main(String[] args) {
-        Worker worker = new Worker(800001L, "Jack");
+        Operator operator = new Operator(800001L, "Jack", 30, 168);
         System.out.println("---------- WORKER ----------");
-        System.out.println("ID: "+worker.getId());
-        System.out.println("Name: "+worker.getName());
+        System.out.println("ID: "+operator.getId());
+        System.out.println("Name: "+operator.getName());
+        String paymentFormat = String.format("Payment/month: U$ %.2f", +operator.calcPayment());
+        System.out.println("Payment/month: U$ " +paymentFormat);
     }
 }
